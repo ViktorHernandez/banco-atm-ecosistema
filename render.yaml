@@ -19,19 +19,14 @@ services:
         sync: false
       - key: JWT_EXPIRES_IN
         value: 15m
-
       - key: APP_TIMEZONE
         value: America/Mexico_City
-
       - key: CORS_ORIGIN
         sync: false
-
       - key: PORTAL_PUBLIC_URL
         sync: false
-
       - key: SERVE_ATM
         value: 'false'
-
       - key: MAIL_ENABLED
         sync: false
       - key: MAIL_TRANSPORT
@@ -46,7 +41,6 @@ services:
   - type: web
     name: banco-atm-cajero-avanzado
     runtime: static
-    region: virginia
     rootDir: atm-client
     buildCommand: ''
     staticPublishPath: .
@@ -54,11 +48,9 @@ services:
   - type: web
     name: banco-portal-web
     runtime: static
-    region: virginia
     rootDir: portal-web
     buildCommand: ''
     staticPublishPath: .
-
     routes:
       - type: rewrite
         source: /app-movil
@@ -66,7 +58,6 @@ services:
       - type: rewrite
         source: /seguridad
         destination: /seguridad.html
-
       - type: rewrite
         source: /resumen
         destination: /portal.html
@@ -100,7 +91,6 @@ services:
       - type: rewrite
         source: /admin/*
         destination: /portal.html
-
       - type: rewrite
         source: /login
         destination: /index.html
