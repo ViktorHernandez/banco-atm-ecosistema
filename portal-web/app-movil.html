@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco ATM · Aplicación móvil</title>
+    <meta
+      name="description"
+      content="La aplicación móvil de Banco ATM está en construcción. Conozca lo que incluirá y qué canales puede usar mientras tanto."
+    />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/publico.css" />
+    <link rel="stylesheet" href="/css/accesibilidad.css" />
+  </head>
+  <body>
+    <div class="sitio">
+      <header class="cabecera">
+        <div class="cabecera__interior">
+          <a class="marca" href="/">
+            <span class="marca__sello">BA</span>
+            <span class="marca__nombre">Banco ATM</span>
+          </a>
+          <nav class="navegacion" aria-label="Navegación del sitio">
+            <a href="/#servicios">Servicios</a>
+            <a href="/#canales">Canales</a>
+            <a href="/#seguridad">Seguridad</a>
+          </nav>
+          <a class="boton" href="/login">Entrar al portal</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="construccion">
+          <div class="construccion__interior">
+            <div>
+              <span class="portada__eyebrow">Aplicación móvil</span>
+              <h1 class="portada__titulo">
+                Estamos <em>construyéndola</em>.
+              </h1>
+              <p class="portada__texto">
+                La aplicación móvil de Banco ATM se encuentra en desarrollo por el
+                equipo responsable de ese canal. Todavía no está disponible para
+                descarga, y por eso preferimos decirlo aquí con claridad en lugar
+                de anunciar una fecha que aún no podemos sostener.
+              </p>
+              <p class="portada__texto">
+                Mientras tanto, todas las operaciones ya están disponibles desde el
+                portal web y desde nuestros cajeros automáticos. Los tres canales
+                trabajan sobre la misma banca, así que lo que haga en uno se refleja
+                de inmediato en los demás.
+              </p>
+
+              <div class="construccion__acciones">
+                <a class="boton" href="/login">Entrar al portal web</a>
+                <a
+                  class="boton boton--secundario"
+                  id="enlaceCajeroApp"
+                  href="http://localhost:5500/"
+                  target="_blank"
+                  rel="noopener"
+                  >Abrir el cajero automático</a
+                >
+              </div>
+            </div>
+
+            <div class="telefono" aria-hidden="true">
+              <div class="telefono__marco">
+                <div class="telefono__muesca"></div>
+                <div class="telefono__pantalla">
+                  <div class="telefono__barra">
+                    <span>9:41</span>
+                    <span>Banco ATM</span>
+                  </div>
+                  <div class="telefono__saldo">
+                    <span class="telefono__etiqueta">Saldo disponible</span>
+                    <span class="telefono__monto">$ 5,000.00</span>
+                    <span class="telefono__cuenta">•••• 0001</span>
+                  </div>
+                  <div class="telefono__acciones">
+                    <span class="telefono__accion">Transferir</span>
+                    <span class="telefono__accion">Pagar</span>
+                    <span class="telefono__accion">Tarjetas</span>
+                    <span class="telefono__accion">Avisos</span>
+                  </div>
+                  <div class="telefono__lista">
+                    <div class="telefono__fila">
+                      <span>Transferencia enviada</span><span>− $250.00</span>
+                    </div>
+                    <div class="telefono__fila">
+                      <span>Depósito en efectivo</span
+                      ><span class="telefono__abono">+ $1,000.00</span>
+                    </div>
+                    <div class="telefono__fila">
+                      <span>Pago de servicio</span><span>− $300.00</span>
+                    </div>
+                  </div>
+                  <div class="telefono__marca">Vista preliminar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="seccion" id="incluira">
+          <h2 class="seccion__titulo">Qué incluirá la aplicación</h2>
+          <p class="seccion__intro">
+            El alcance previsto para la primera versión, tomado del backlog del
+            proyecto. Todas estas operaciones ya existen en la API bancaria: lo que
+            falta es la interfaz del canal móvil.
+          </p>
+
+          <div class="servicios">
+            <article class="servicio">
+              <div class="servicio__icono" data-icono="cuentas"></div>
+              <h3 class="servicio__titulo">Saldo y movimientos</h3>
+              <p>
+                Consulta del saldo disponible y del histórico de operaciones con los
+                mismos filtros por fecha y tipo que ofrece el portal.
+              </p>
+            </article>
+            <article class="servicio">
+              <div class="servicio__icono" data-icono="transferencias"></div>
+              <h3 class="servicio__titulo">Transferencias</h3>
+              <p>
+                Envíos entre cuentas del banco con confirmación previa y comprobante
+                descargable, sujetos a los mismos límites que el resto de canales.
+              </p>
+            </article>
+            <article class="servicio">
+              <div class="servicio__icono" data-icono="tarjeta"></div>
+              <h3 class="servicio__titulo">Control de tarjetas</h3>
+              <p>
+                Bloqueo y desbloqueo inmediato desde el teléfono, con efecto en el
+                cajero en la siguiente operación.
+              </p>
+            </article>
+            <article class="servicio">
+              <div class="servicio__icono" data-icono="notificaciones"></div>
+              <h3 class="servicio__titulo">Avisos push</h3>
+              <p>
+                Notificaciones en el momento en que ocurre un movimiento, además del
+                aviso en el portal y del correo electrónico.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="seccion--tenue">
+          <div class="seccion__interior">
+            <h2 class="seccion__titulo">Estado del desarrollo</h2>
+            <p class="seccion__intro">
+              El canal móvil depende de la misma API bancaria que ya está en
+              operación, por lo que el trabajo pendiente es de interfaz.
+            </p>
+
+            <ul class="seguridad__lista">
+              <li>
+                <span class="seguridad__numero">✓</span>
+                <div>
+                  <strong>API bancaria común</strong>
+                  <p>
+                    Terminada y en operación. Es la misma que consumen el portal web
+                    y los cajeros.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="seguridad__numero">✓</span>
+                <div>
+                  <strong>Autenticación y seguridad</strong>
+                  <p>
+                    Resueltas en el backend: tokens con vencimiento, contraseñas
+                    cifradas y registro de auditoría por canal.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="seguridad__numero">•</span>
+                <div>
+                  <strong>Interfaz móvil</strong>
+                  <p>
+                    En construcción por el equipo responsable del canal. Es el
+                    trabajo que falta para poder publicar la aplicación.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="seguridad__numero">•</span>
+                <div>
+                  <strong>Publicación en tiendas</strong>
+                  <p>
+                    Pendiente. Al tratarse de un proyecto académico, la aplicación no
+                    se distribuirá en App Store ni en Google Play.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="pie">
+        <div class="pie__interior">
+          <div class="pie__legal">
+            <span>
+              © <span id="anioActual">2026</span> Banco ATM. Proyecto académico sin
+              operación financiera real.
+            </span>
+            <span><a href="/">Volver al inicio</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/config.js"></script>
+    <script src="/js/traducciones.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/accesibilidad.js"></script>
+    <script src="/js/enlace-cajero.js"></script>
+    <script>
+      (function () {
+        'use strict';
+
+        var config = window.PORTAL_CONFIG || {};
+        var util = window.PortalUtil;
+
+        document.addEventListener('DOMContentLoaded', function () {
+          util.nodos('[data-icono]').forEach(function (elemento) {
+            elemento.innerHTML = util.icono(elemento.getAttribute('data-icono'));
+          });
+
+          var enlace = util.nodo('#enlaceCajeroApp');
+          if (enlace && config.atmUrl) {
+            enlace.href = config.atmUrl;
+          }
+
+          util.nodo('#anioActual').textContent = String(new Date().getFullYear());
+        });
+      })();
+    </script>
+  </body>
+</html>
